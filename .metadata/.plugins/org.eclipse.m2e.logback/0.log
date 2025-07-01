@@ -12366,3 +12366,9 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.lo
 2025-07-01 17:37:27,680 [Worker-33: Launching Github01_Hackathon-Project-ZigWheels.target.classes.com.cognizant.testNG.xml] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-07-01 17:37:27,682 [Worker-33: Launching Github01_Hackathon-Project-ZigWheels.target.classes.com.cognizant.testNG.xml] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2025-07-01 17:37:27,683 [Worker-33: Launching Github01_Hackathon-Project-ZigWheels.target.classes.com.cognizant.testNG.xml] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-07-01 21:17:57,877 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-07-01 21:18:56,552 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.21; built: 2025-05-09T00:32:00.688Z; git: 1c4719601e31b05b7d68910d2edd980259f1f53c; jvm 21.0.7+6-LTS
+2025-07-01 21:18:56,612 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@12953686{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@35055939{STARTED}}
+2025-07-01 21:18:56,612 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2025-07-01 21:18:56,639 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@573be849{HTTP/1.1, (http/1.1)}{127.0.0.1:52104}
+2025-07-01 21:18:56,833 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@7964727f{STARTING}[12.0.21,sto=0] @252694ms
