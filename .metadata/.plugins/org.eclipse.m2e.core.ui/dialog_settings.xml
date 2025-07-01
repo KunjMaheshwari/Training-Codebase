@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\2408683\eclipse-workspace\BasicSyntax"/>
+			<item value="C:\Users\2408683\eclipse-workspace\AlertMethods"/>
+			<item value="C:\Users\2408683\eclipse-workspace\MiniProject"/>
+			<item value="C:\Users\2408683\eclipse-workspace\MiniProject\pom.xml"/>
+			<item value="C:\Users\2408683\eclipse-workspace\ApachePOI_Lec2\src\test\java\Main"/>
+			<item value="C:\Users\2408683\eclipse-workspace\ApachePOI_Lect1\pom.xml"/>
+			<item value="C:\Users\2408683\eclipse-workspace\KeyboardActions\src\test\java"/>
+			<item value="C:\Users\2408683\eclipse-workspace\SliderDemo\pom.xml"/>
+			<item value="C:\Users\2408683\eclipse-workspace\MiniProject\src\test\java\Main\MainClass.java"/>
+			<item value="C:\Users\2408683\eclipse-workspace\DatePicker\pom.xml"/>
+			<item value="C:\Users\2408683\eclipse-workspace\AlertMethods\src\test\java\Main\Main.java"/>
+			<item value="C:\Users\2408683\eclipse-workspace\AlertMethods\src\test\java"/>
+			<item value="C:\Users\2408683\eclipse-workspace\WaitMethods\src\test\java\MainOne\Main.java"/>
+			<item value="C:\Users\2408683\eclipse-workspace\Practice01\src\test\java\Home\Main.java"/>
+			<item value="C:\Users\2408683\eclipse-workspace\001\src\test\java\Main\Login.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="Github01"/>
+			<item value="OpenCartV121"/>
+			<item value="FinalInterview"/>
+			<item value="InterviewPractice2"/>
+			<item value="InterviewPractice"/>
+			<item value="TestNGPractice"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="Github01"/>
+			<item value="OpenCartV121"/>
+			<item value="FinalInterview"/>
+			<item value="InterviewPractice2"/>
+			<item value="InterviewPractice"/>
+			<item value="TestNGPractice"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

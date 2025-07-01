@@ -1,0 +1,23 @@
+package testCases;
+
+import org.openqa.selenium.WebDriver;
+
+public class TC001_AccountRegistrationTest {
+	
+	public WebDriver driver;
+	
+	public void setUp() {
+		
+	}
+	
+	
+	
+	public void tearDown() {
+		
+	}
+	
+	
+	public void verify_account_registration() {
+		
+	}
+}

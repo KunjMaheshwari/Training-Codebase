@@ -1,0 +1,20 @@
+package Practice01;
+
+//1. Open app
+//2. Login 
+//3. Logout
+
+public class Practice01Test {
+	void openApp() {
+		System.out.println("Opening the application.");
+	}
+	
+	void login() {
+		
+	}
+	
+	
+	void logout() {
+		
+	}
+}

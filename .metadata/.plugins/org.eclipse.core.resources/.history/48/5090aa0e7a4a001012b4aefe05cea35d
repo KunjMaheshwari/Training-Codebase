@@ -1,0 +1,139 @@
+package Main;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.List;
+
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class MainClass {
+	WebDriver driver;
+	XSSFWorkbook workbook;
+	XSSFSheet sheet;
+	FileOutputStream file;
+	int rowNum = 0;
+
+	@BeforeClass
+	public void setUp() throws FileNotFoundException {
+		//Creating a new File
+		file= new FileOutputStream(System.getProperty("user.dir")+"\\testdata\\ExampleFileSecond.xlsx");
+		//Creating a workbook
+		workbook = new XSSFWorkbook();
+		// Creating a new sheet inside the workbook
+		sheet = workbook.createSheet("Online Mobile Search");
+
+		//Initializing the ChromeDriver
+		driver = new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+			
+		//Using Wait() to wait for 10 seconds.
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			
+		// Maximizing the window.
+		driver.manage().window().maximize();
+		}
+	
+	@Test(priority=0, dataProvider = "dp")
+	public void searchMobilePhone(String searchText) {
+//		String searchText = "mobile smartphones under 30000"; //searching string.
+		//Searching for the "Mobile smartphones under 30000" on the searchbox
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys(searchText);
+		//Click to search 
+		driver.findElement(By.xpath("//input[@id='nav-search-submit-button']")).click();
+		
+		// Log entered search text
+		XSSFRow row1 = sheet.createRow(rowNum++);
+		row1.createCell(0).setCellValue("Entered Search Text");
+		row1.createCell(1).setCellValue(searchText);
+
+		
+		//Printing the Searched Result in the console that is the Validation Part.
+		String partOne = driver.findElement(By.xpath("//h2[@class='a-size-base a-spacing-small a-spacing-top-small a-text-normal']//span[1]")).getText();
+		String partTwo = driver.findElement(By.xpath("//h2[@class='a-size-base a-spacing-small a-spacing-top-small a-text-normal']//span[3]")).getText();
+		String searchSummary = partOne +" "+ partTwo;
+		
+		System.out.println(searchSummary);
+		
+
+		// Log search result summary
+		XSSFRow row2 = sheet.createRow(rowNum++);
+		row2.createCell(0).setCellValue("Search Result Summary");
+		row2.createCell(1).setCellValue(searchSummary);
+	}
+	
+	@Test(dependsOnMethods= {"searchMobilePhone"})
+	public void sortByNewestArrival() {
+		//Selecting the "Sort By" List box and clicking on it.
+		WebElement parentSpan = driver.findElement(By.xpath("//span[@class='a-button a-button-dropdown a-button-small']"));
+		WebElement childSpan = parentSpan.findElement(By.xpath("//span[@class='a-dropdown-prompt']"));
+		childSpan.click();
+				
+		// Store the options displayed in a List of return type WebElement.
+		List<WebElement> options = driver.findElements(By.xpath("//ul[@class='a-nostyle a-list-link']//li"));
+		int sortOptionCount = options.size();
+		System.out.println("There are total " + sortOptionCount + " options in the Sort by List Box");
+
+		// Log sort option count
+		XSSFRow row3 = sheet.createRow(rowNum++);
+		row3.createCell(0).setCellValue("Sort Option Count");
+		row3.createCell(1).setCellValue(sortOptionCount);
+
+				
+		//Clicking the "Newest Arrivals" option from the Drop Down.
+		for(WebElement e : options) {
+			if(e.getText().trim().equalsIgnoreCase("Newest Arrivals")) {
+				e.click();
+				break;
+			}
+		}
+				
+		//Verifying that Newest Arrival option got selected Successfully or not.
+		String isSelectedNewestArrivals = driver.findElement(By.xpath("//span[@class='a-dropdown-prompt']")).getText();
+		
+		String verificationResult;
+		try {
+			Assert.assertEquals(isSelectedNewestArrivals, "Newest Arrivals", "Verification Failed");
+			verificationResult = "Newest Arrivals Verified";
+		}catch(AssertionError e) {
+			verificationResult = "Verification Failed" + e.getMessage();
+		}
+
+		// Log verification result
+		XSSFRow row4 = sheet.createRow(rowNum++);
+		row4.createCell(0).setCellValue("Sort Selection Verification");
+		row4.createCell(1).setCellValue(verificationResult);
+	}
+
+	@AfterClass
+	void tearDown() throws IOException {
+		//Creating a new excel file if it does not exist.
+		workbook.write(file);
+
+		// Closing the workbook, file and browser
+		workbook.close();
+		file.close();
+		driver.close();
+	}
+	
+	@DataProvider(name = "dp")
+	Object[][] inputSearch(){
+		Object data[][] = {
+				{"mobile smartphones under 30000"}
+				
+		};
+		return data;
+	}
+}

@@ -1,0 +1,47 @@
+package testCases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePage;
+import pageObjects.LoginPage;
+import pageObjects.MyAccountPage;
+import testBase.BaseClass;
+import utilities.DataProviders;
+
+/*  
+ * Data Valid - Login success - test pass - logout
+ * Data Valid - Login Failed - test failed.
+ * 
+ * Data invalid - Login Success - test failed - logout
+ * Data invalid - Login Failed - Test pass.
+ * 
+ */
+
+public class TC003_LoginDataDrivenTest extends BaseClass{
+	
+	@Test(dataProvider = "LoginData", dataProviderClass = DataProviders.class) // getting the data provider from different class.
+	public void verify_LoginDDT(String email, String pwd, String exp) {
+		HomePage hp = new HomePage(driver);
+		hp.clickMyAccount();
+		hp.clickLogin();
+		
+		// Login 
+		LoginPage lp = new LoginPage(driver);
+		lp.setEmail(email);
+		lp.setPassword(pwd);
+		lp.clickLogin();
+		
+		// My Account 
+		MyAccountPage map = new MyAccountPage(driver);
+		boolean targetPage = map.isMyAccountPageDisplayed();
+		
+		if(exp.equals("Valid")) {
+			if(targetPage == true) {
+				Assert.assertTrue(true);
+			}
+		}
+		
+		
+	}
+}

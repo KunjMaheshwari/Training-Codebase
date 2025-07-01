@@ -1,0 +1,11 @@
+package Main;
+
+import org.testng.annotations.BeforeClass;
+
+public class LoginTest {
+
+	@BeforeClass
+	void setUp() {
+		
+	}
+}

@@ -1,0 +1,30 @@
+package Main;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class MainClass {
+	public static void main(String args[]) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.manage().window().maximize();
+		
+		//Step - Enter the search text in search box “mobile smartphones under 30000”
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("mobile smartphones under 30000");
+		
+		driver.findElement(By.xpath("//input[@id='nav-search-submit-button']")).click();
+		
+		// String validation logic
+		String expectedSearch = "mobile smartphones under 30000";
+		String expectedNumberOfPages = "16";
+		String expectedNumberOfStocks = "40000";
+		
+		
+	}
+}

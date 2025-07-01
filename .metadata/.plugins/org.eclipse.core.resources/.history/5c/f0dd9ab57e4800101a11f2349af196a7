@@ -1,0 +1,20 @@
+package Practice01;
+
+//1. Open App
+//2. Login 
+//3. Logout
+
+public class Practice01Test {
+	void openApp() {
+		
+	}
+	
+	void login() {
+		
+	}
+	
+	
+	void logout() {
+		
+	}
+}

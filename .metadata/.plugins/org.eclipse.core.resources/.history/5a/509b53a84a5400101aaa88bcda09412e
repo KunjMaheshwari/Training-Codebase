@@ -1,0 +1,14 @@
+package testCases;
+
+import pageObjects.HomePage;
+import testBase.BaseClass;
+
+public class TC002_LoginTest extends BaseClass{
+	
+	public void verify_login() {
+		logger.info("******* Starting the Test Case *********");
+		
+		HomePage hp = new HomePage(driver);
+		
+	}
+}

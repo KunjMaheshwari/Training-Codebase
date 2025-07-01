@@ -1,0 +1,25 @@
+package Practice01;
+
+import org.testng.annotations.Test;
+
+//1. Open app
+//2. Login 
+//3. Logout
+
+public class Practice01Test {
+	
+	@Test
+	void openApp() {
+		System.out.println("Opening the application.");
+	}
+	
+	@Test
+	void login() {
+		System.out.println("Login the Application");
+	}
+	
+	@Test
+	void logout() {
+		System.out.println("Logout the Application.");
+	}
+}

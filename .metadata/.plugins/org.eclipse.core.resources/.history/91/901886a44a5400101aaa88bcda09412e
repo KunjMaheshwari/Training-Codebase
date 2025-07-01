@@ -1,0 +1,12 @@
+package testCases;
+
+import testBase.BaseClass;
+
+public class TC002_LoginTest extends BaseClass{
+	
+	public void verify_login() {
+		logger.info("******* Starting the Test Case *********");
+		
+		
+	}
+}

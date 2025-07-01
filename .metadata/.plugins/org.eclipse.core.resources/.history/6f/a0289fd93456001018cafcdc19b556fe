@@ -1,0 +1,5 @@
+appURL = https://tutorialsninja.com/demo/
+email = kunj@gmail.com
+password = test@123
+searchProduct = iPhone
+execution_env = local

@@ -1,0 +1,9 @@
+package Main;
+
+public class LoginTest {
+
+	@BeforeClass
+	void setUp() {
+		
+	}
+}

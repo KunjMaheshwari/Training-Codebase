@@ -1,0 +1,71 @@
+package testCases;
+
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePage;
+import pageObjects.LoginPage;
+import pageObjects.MyAccountPage;
+import testBase.BaseClass;
+import utilities.DataProviders;
+
+/*  
+ * Data Valid - Login success - test pass - logout
+ * Data Valid - Login Failed - test failed.
+ * 
+ * Data invalid - Login Success - test failed - logout
+ * Data invalid - Login Failed - Test pass.
+ * 
+ */
+
+public class TC003_LoginDataDrivenTest extends BaseClass {
+
+	@Test(dataProvider = "LoginData", dataProviderClass = DataProviders.class, groups="datadriven") // getting the data provider from
+																				// different class.
+	public void verify_LoginDDT(String email, String pwd, String exp) {
+		
+		logger.info("*********** Test has been started ************");
+		try {
+			HomePage hp = new HomePage(driver);
+			hp.clickMyAccount();
+			hp.clickLogin();
+
+			// Login
+			LoginPage lp = new LoginPage(driver);
+			lp.setEmail(email);
+			lp.setPassword(pwd);
+			lp.clickLogin();
+
+			// My Account
+			MyAccountPage map = new MyAccountPage(driver);
+			boolean targetPage = map.isMyAccountPageDisplayed();
+
+			if (exp.equals("Valid")) {
+				if (targetPage == true) {
+					map.clickLogout();
+					Assert.assertTrue(true);
+				} else {
+					Assert.fail();
+				}
+			}
+
+			if (exp.equals("Invalid")) {
+				if (targetPage == true) {
+					map.clickLogout();
+					Assert.fail();
+				} else {
+					Assert.assertTrue(true);
+				}
+			}
+		}catch(Exception e) {
+			logger.error("Error occured.");
+			logger.debug("Test debug.");
+		}
+		
+		logger.info("************** Test completed **************");
+	}
+}
