@@ -62,6 +62,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="GroupProject"/>
 			<item value="Github01"/>
 			<item value="OpenCartV121"/>
 			<item value="FinalInterview"/>
@@ -72,6 +73,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="GroupProject"/>
 			<item value="Github01"/>
 			<item value="OpenCartV121"/>
 			<item value="FinalInterview"/>

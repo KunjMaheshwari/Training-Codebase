@@ -1,24 +1,12 @@
-2025-07-01 10:30:42 INFO  TC001_AccountRegistrationTest:15 - ******* Starting the Test Cases  ***********
-2025-07-01 10:30:43 INFO  TC001_AccountRegistrationTest:20 - Clicked on My Account
-2025-07-01 10:30:43 INFO  TC001_AccountRegistrationTest:23 - Clicked on Register
-2025-07-01 10:30:43 INFO  TC001_AccountRegistrationTest:27 - Providing the form details
-2025-07-01 10:30:46 INFO  TC001_AccountRegistrationTest:43 - Validating the expected message
-2025-07-01 10:30:46 INFO  TC001_AccountRegistrationTest:51 - ************* Logging Finished ********
-2025-07-01 10:30:51 INFO  TC002_LoginTest:15 - ******* Starting the Test Case *********
-2025-07-01 10:30:54 INFO  TC002_LoginTest:39 - *************Logger has been ended***********
-2025-07-01 10:32:07 INFO  TC001_AccountRegistrationTest:15 - ******* Starting the Test Cases  ***********
-2025-07-01 10:32:08 INFO  TC001_AccountRegistrationTest:20 - Clicked on My Account
-2025-07-01 10:32:08 INFO  TC001_AccountRegistrationTest:23 - Clicked on Register
-2025-07-01 10:32:08 INFO  TC001_AccountRegistrationTest:27 - Providing the form details
-2025-07-01 10:32:11 INFO  TC001_AccountRegistrationTest:43 - Validating the expected message
-2025-07-01 10:32:11 INFO  TC001_AccountRegistrationTest:51 - ************* Logging Finished ********
-2025-07-01 10:32:16 INFO  TC002_LoginTest:15 - ******* Starting the Test Case *********
-2025-07-01 10:32:18 INFO  TC002_LoginTest:39 - *************Logger has been ended***********
-2025-07-01 10:32:38 INFO  TC001_AccountRegistrationTest:15 - ******* Starting the Test Cases  ***********
-2025-07-01 10:32:39 INFO  TC001_AccountRegistrationTest:20 - Clicked on My Account
-2025-07-01 10:32:40 INFO  TC001_AccountRegistrationTest:23 - Clicked on Register
-2025-07-01 10:32:40 INFO  TC001_AccountRegistrationTest:27 - Providing the form details
-2025-07-01 10:32:41 INFO  TC001_AccountRegistrationTest:43 - Validating the expected message
-2025-07-01 10:32:41 INFO  TC001_AccountRegistrationTest:51 - ************* Logging Finished ********
-2025-07-01 10:32:46 INFO  TC002_LoginTest:15 - ******* Starting the Test Case *********
-2025-07-01 10:32:49 INFO  TC002_LoginTest:39 - *************Logger has been ended***********
+2025-07-03 09:37:50 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2408683\eclipse-workspace\OpenCartV121\master.xml
+
+2025-07-03 09:39:24 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2408683\eclipse-workspace\OpenCartV121\master.xml
+
+2025-07-03 09:43:03 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2408683\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2025-07-03 09:44:24 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2408683\eclipse-workspace\OpenCartV121\master.xml
+
